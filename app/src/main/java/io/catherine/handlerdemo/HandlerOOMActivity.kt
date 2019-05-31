@@ -159,11 +159,7 @@ class HandlerOOMActivity : Activity() {
      */
     private class OutHandler(activity: Activity) : Handler() {
         //定义成弱类型
-        var reference: WeakReference<Activity>
-
-        init {
-            this.reference = activity as WeakReference<Activity>
-        }
+        var reference: WeakReference<Activity> = activity as WeakReference<Activity>
 
 
         //通过复写handleMessage来确定更新UI的操作
